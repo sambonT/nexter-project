@@ -1,0 +1,414 @@
+:root {
+  /* Colors */
+  --color-primary: #c69963;
+  --color-primary-dark: #b28451;
+
+  --color-secondary: #101d2c;
+
+  --color-grey-light-1: #f9f7f6;
+  --color-grey-light-2: #aaa;
+
+  --color-grey-dark-1: #54483a;
+  --color-grey-dark-2: #6d5d4b;
+
+  /* Fonts */
+  --font-primary: "Nunito", sans-serif;
+  --font-display: "Josefin Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 10px/16px =62.5% -> 1 rem = 10px */
+}
+body {
+  font-family: var(--font-primary);
+  color: var(--color-grey-dark-2);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.sidebar {
+  background-color: var(--color-primary);
+}
+
+.header {
+  background-color: var(--color-grey-dark-1);
+}
+
+.realtors {
+  background-color: var(--color-secondary);
+}
+
+.features {
+  background-color: #4caf50;
+}
+
+.story__pictures {
+  background-color: var(--color-primary);
+}
+
+.story__content {
+  background-color: var(--color-grey-light-1);
+}
+
+.homes {
+  background-color: var(--color-secondary);
+}
+
+.gallery {
+  background-color: var(--color-grey-dark-1);
+}
+
+.footer {
+  background-color: var(--color-secondary);
+}
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(6, min-content);
+  grid-template-columns: min-content 1fr min-content;
+}
+
+.sidebar {
+  grid-row: 1 /-1;
+  grid-column: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 3rem;
+  width: 6rem;
+}
+
+/* ----------------------------------------------
+            header styles
+------------------------------------------------*/
+
+header {
+  background-color: #54483a;
+  grid-column: 2;
+  grid-row: 1;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  padding: 4rem 8rem;
+  gap: 1.5rem;
+  background-image:
+    linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)),
+    url(../img/hero.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.header {
+  height: 70vh;
+}
+
+.header-logo {
+  height: 2.5rem;
+  justify-self: center;
+}
+
+.header-text {
+  align-self: center;
+}
+
+.header-seenon {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header-seenon p {
+  font-size: 1.6rem;
+  color: #aaa;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.header-seenon::before {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #aaa;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.header-seenon::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #aaa;
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.header-logos {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header-logos img {
+  height: 2.5rem;
+  filter: brightness(70%);
+}
+
+.heading-1 {
+  font-size: 4.5rem;
+  color: #f9f7f6;
+  line-height: 1;
+}
+
+.heading-2 {
+  font-size: 4rem;
+  font-style: italic;
+  line-height: 1;
+}
+
+.heading-1,
+.heading-2,
+.heading-3,
+.heading-4 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+}
+
+.heading-2--light {
+  color: #f9f7f6;
+}
+.heading-2--dark {
+  color: #54483a;
+}
+
+.heading-3 {
+  font-size: 1.6rem;
+  color: #c69963;
+  text-transform: uppercase;
+}
+
+.heading-4 {
+  font-size: 1.9rem;
+}
+.heading-4--light {
+  color: #f9f7f6;
+}
+.heading-4--dark {
+  color: #54483a;
+}
+
+.btn {
+  background-color: #c69963;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1.8rem 3rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn:hover {
+  background-color: #b28451;
+}
+
+/*---------------------------------------------
+             realtors styling 
+------------------------------------------------*/
+
+.realtors {
+  background-color: #101d2c;
+  grid-column: 3;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  gap: 2rem;
+}
+
+.realtors h3 {
+  color: #c69963;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.4rem;
+}
+
+.realtors-list {
+  display: grid;
+  grid-template-columns: min-content max-content;
+  grid-template-rows: repeat(3, min-content);
+  align-items: center;
+  gap: 2rem 1.5rem;
+}
+
+.realtors-list img {
+  width: 7rem;
+  border-radius: 50%;
+  display: block;
+}
+
+.realtor-info h4 {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.realtor-info p {
+  color: #aaa;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+/* ------------------------------------------------
+         features styling
+-------------------------------------------------- */
+
+.features {
+  grid-column: 2 / -1;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  padding: 10rem;
+  background-color: #f9f7f6;
+}
+
+.feature-icon {
+  width: 40px;
+  height: 40px;
+  fill: var(--color-primary);
+  display: block;
+
+  grid-row: 1 / -1;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.feature-text h3 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.feature-text p {
+  font-size: 1.5rem;
+}
+
+/* ------------------------------------------------
+         story styling
+-------------------------------------------------- */
+.story {
+  grid-row: 3;
+  grid-column: 2 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1 fr);
+
+  height: 70vh;
+}
+
+.story-pictures {
+  grid-column: 1 / 3;
+  grid-row: 1 / -1;
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center; /* vertical */
+
+  background-image:
+    linear-gradient(rgba(198, 153, 99, 0.5), rgba(198, 153, 99, 0.5)),
+    url(../img/back.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-column: 1 /3;
+  grid-row: 1 / -1;
+}
+
+.story-content {
+  grid-column: 3 / -1;
+  grid-row: 1 / -1;
+}
+
+.story img {
+  width: 70%;
+  height: auto;
+}
+
+.story-img {
+  grid-column: 2 /4;
+  grid-row: 2;
+  width: 10%;
+  align-self: start;
+  justify-self: start;
+}
+
+/* ------------------------------------------------
+         homes styling
+-------------------------------------------------- */
+
+.homes {
+  grid-row: 4;
+  grid-column: 2 / -1;
+}
+
+.gallery {
+  grid-row: 5;
+  grid-column: 2 / -1;
+}
+
+.footer {
+  grid-row: 6;
+  grid-column: 2 / -1;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-btn span,
+.nav-btn span::before,
+.nav-btn span::after {
+  display: block;
+  width: 3rem;
+  height: 2px;
+  background-color: #fff;
+}
+
+.nav-btn span {
+  position: relative;
+}
+
+.nav-btn span::before,
+.nav-btn span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-btn span::before {
+  top: -0.8rem;
+}
+
+.nav-btn span::after {
+  top: 0.8rem;
+}
