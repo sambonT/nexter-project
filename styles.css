@@ -646,3 +646,213 @@ header {
 .nav-btn span::after {
   top: 0.8rem;
 }
+
+/* ================================================
+   RESPONSIVE DESIGN
+   ================================================ */
+
+/* --- 1200px: Large tablet / small desktop --- */
+@media (max-width: 1200px) {
+  html {
+    font-size: 56.25%; /* 9px base */
+  }
+
+  header {
+    padding: 4rem 6rem;
+  }
+
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 8rem;
+  }
+
+  .story-content {
+    padding: 4rem 6rem;
+  }
+
+  .homes {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 8rem;
+    gap: 5rem;
+  }
+
+  .footer {
+    padding: 5rem 8rem;
+  }
+}
+
+/* --- 900px: Tablet portrait --- */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 6rem repeat(7, min-content);
+  }
+
+  .sidebar {
+    grid-row: 1;
+    grid-column: 1;
+    width: 100%;
+    padding: 0 3rem;
+    padding-top: 0;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  header {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 4rem 5rem;
+  }
+
+  .realtors {
+    grid-column: 1;
+    grid-row: 3;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+    padding: 3rem 5rem;
+  }
+
+  .realtors-list {
+    grid-template-columns: repeat(3, min-content max-content);
+    grid-template-rows: 1fr;
+  }
+
+  .features {
+    grid-column: 1;
+    grid-row: 4;
+    padding: 6rem;
+  }
+
+  .story {
+    grid-column: 1;
+    grid-row: 5;
+    grid-template-columns: 1fr;
+    grid-template-rows: 45vh auto;
+    height: auto;
+  }
+
+  .story-pictures {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .story-img--2 {
+    display: none;
+  }
+
+  .story-content {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    padding: 4rem;
+  }
+
+  .homes {
+    grid-column: 1;
+    grid-row: 6;
+    padding: 6rem;
+    gap: 4rem;
+  }
+
+  .gallery {
+    grid-column: 1;
+    grid-row: 7;
+  }
+
+  .footer {
+    grid-column: 1;
+    grid-row: 8;
+    padding: 4rem 5rem;
+  }
+}
+
+/* --- 600px: Mobile --- */
+@media (max-width: 600px) {
+  html {
+    font-size: 50%; /* 8px base */
+  }
+
+  header {
+    padding: 4rem 3rem;
+  }
+
+  .header {
+    height: auto;
+    min-height: 60vh;
+  }
+
+  .realtors {
+    flex-direction: column;
+    padding: 3rem;
+    gap: 2rem;
+  }
+
+  .realtors-list {
+    grid-template-columns: min-content max-content;
+    grid-template-rows: repeat(3, min-content);
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    padding: 4rem 3rem;
+    gap: 3rem;
+  }
+
+  .story {
+    grid-template-rows: 35vh auto;
+  }
+
+  .story-content {
+    padding: 3rem;
+  }
+
+  .homes {
+    grid-template-columns: 1fr;
+    padding: 4rem 3rem;
+    gap: 4rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .gallery__item--1, .gallery__item--2, .gallery__item--3,
+  .gallery__item--4, .gallery__item--5, .gallery__item--6,
+  .gallery__item--7, .gallery__item--8, .gallery__item--9,
+  .gallery__item--10, .gallery__item--11, .gallery__item--12,
+  .gallery__item--13, .gallery__item--14 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .gallery__item {
+    height: 40vw;
+  }
+
+  .footer {
+    padding: 3rem;
+  }
+
+  .footer-nav ul {
+    gap: 1.5rem;
+  }
+
+  .footer-nav li {
+    padding: 1rem;
+  }
+}
+
+/* --- Landscape mobile: Fix cramped vh heights --- */
+@media (max-height: 500px) and (orientation: landscape) {
+  .header {
+    height: auto;
+    min-height: 50vh;
+  }
+
+  .story {
+    height: auto;
+  }
+}
